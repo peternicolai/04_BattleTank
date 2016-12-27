@@ -5,4 +5,4 @@ Udemy section 04 tank game
 * Thing 1
 * Thing 2
 
-Links are like [this one]((https://www.youtube.com) which goes to YouTube.
+Links are like [this one](https://www.youtube.com) which goes to YouTube.
