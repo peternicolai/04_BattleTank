@@ -8,19 +8,30 @@
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
+
+
 	UE_LOG(LogTemp, Warning, TEXT("Player Contoller Begin Play"));
 
-	ATankPlayerController::GetControlledTank();
+
+	auto ControlledTank = GetControlledTank();
+	if (!ControlledTank)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Player Controller not possesing a tank."));
+		return;
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Player Controller possesing %s."), *(ControlledTank->GetName()));
+
+	}
+	
 
 }
 
 ATank* ATankPlayerController::GetControlledTank() const
 {
-	UE_LOG(LogTemp, Warning, TEXT("PlayerController Get Tank running.")); 
-	//UE_LOG(LogTemp, Warning, TEXT("Possessed Pawn is %s"), *GetOwner()->GetName());
-	return Cast<ATank>(GetPawn());
+
+		UE_LOG(LogTemp, Warning, TEXT("PlayerController Get Tank running."));
+		return Cast<ATank>(GetPawn());
 };
-//
-//FString Objectname = GetOwner()->GetName();
-//FString ObjectPos = GetOwner()->GetActorLocation().ToString();
-//UE_LOG(LogTemp, Warning, TEXT("%s is at %s"), *Objectname, *ObjectPos);
+
