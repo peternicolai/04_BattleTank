@@ -28,6 +28,20 @@ void ATankPlayerController::BeginPlay()
 
 }
 
+
+
+	
+
+	// Called every frame
+void ATankPlayerController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	//UE_LOG(LogTemp, Warning, TEXT("Player Controller ticking."));
+
+	//AimTowardsCrosshair()
+}
+
+
 ATank* ATankPlayerController::GetControlledTank() const
 {
 
@@ -35,3 +49,18 @@ ATank* ATankPlayerController::GetControlledTank() const
 		return Cast<ATank>(GetPawn());
 };
 
+
+
+void ATankPlayerController::AimTowardsCrosshair()
+{
+	if (!GetControlledTank())
+	{
+		return;
+	}
+	else
+	{
+		//get wordl location through crosshair line trace
+		//if it hits something
+			//tell controll tank aim at this point
+	}
+}

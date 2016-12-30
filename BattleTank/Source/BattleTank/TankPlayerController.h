@@ -16,8 +16,18 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 	
 public:
 
+	// Called every frame
+	virtual void Tick(float DeltaSeconds) override;
+
 	ATank* GetControlledTank() const;
 
 	virtual void BeginPlay() override;
 	
+
+private:
+
+	//start tank moving barrel so shot hit where corssahiur hits world.
+	void ATankPlayerController::AimTowardsCrosshair();
+
+
 };
