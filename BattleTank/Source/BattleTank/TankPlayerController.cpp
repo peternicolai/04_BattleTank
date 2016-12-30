@@ -10,7 +10,7 @@ void ATankPlayerController::BeginPlay()
 	Super::BeginPlay();
 
 
-	UE_LOG(LogTemp, Warning, TEXT("Player Contoller Begin Play"));
+	//UE_LOG(LogTemp, Warning, TEXT("Player Contoller Begin Play"));
 
 
 	auto ControlledTank = GetControlledTank();
@@ -31,7 +31,7 @@ void ATankPlayerController::BeginPlay()
 ATank* ATankPlayerController::GetControlledTank() const
 {
 
-		UE_LOG(LogTemp, Warning, TEXT("PlayerController Get Tank running."));
+		//UE_LOG(LogTemp, Warning, TEXT("PlayerController Get Tank running."));
 		return Cast<ATank>(GetPawn());
 };
 
