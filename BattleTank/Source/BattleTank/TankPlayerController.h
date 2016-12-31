@@ -29,5 +29,6 @@ private:
 	//start tank moving barrel so shot hit where corssahiur hits world.
 	void ATankPlayerController::AimTowardsCrosshair();
 
-
+	bool GetSightRayHitLocation(FVector& HitLocation) const;
 };
+

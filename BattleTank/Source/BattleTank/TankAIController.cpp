@@ -52,6 +52,6 @@ ATank* ATankAIController::GetAIControlledTank() const
 ATank* ATankAIController::GetPlayerTank() const
 {
 	//UE_LOG(LogTemp, Warning, TEXT("Finding Player Tank..."));
-	return Cast<ATank>(GetWorld()->GetFirstPlayerController()->GetPawn());;
+	return Cast<ATank>(GetWorld()->GetFirstPlayerController()->GetPawn());
 }
 
