@@ -18,14 +18,14 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 private:
 
 	// Called every frame
-	virtual void Tick(float DeltaSeconds) override;
+	virtual void Tick(float DeltaSeconds) ;
 
 	ATank* GetControlledTank() const;
 
 	virtual void BeginPlay() override;
 
-	//start tank moving barrel so shot hit where corssahiur hits world.
-	void ATankPlayerController::AimTowardsCrosshair();
+	//start tank moving barrel so shot hit where corsshair hits world.
+	void AimTowardsCrosshair();
 
 	bool GetSightRayHitLocation(FVector& HitLocation) const;
 
@@ -37,5 +37,9 @@ private:
 	
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
 
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
+
+	UPROPERTY(EditAnywhere)
+	float LineTraceRange = 1000000;
 };
 

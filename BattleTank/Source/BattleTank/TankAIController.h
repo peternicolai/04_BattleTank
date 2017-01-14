@@ -22,5 +22,10 @@ private:
 
 	virtual void BeginPlay() override;
 
+	// Called every frame
+	virtual void Tick(float DeltaSeconds) override;
+
+	void AimTowardsPlayer();
+
 };
 
