@@ -25,7 +25,7 @@ private:
 
 	virtual void BeginPlay() override;
 
-	//start tank moving barrel so shot hit where corsshair hits world.
+	//start tank moving barrel so shot hit where crosshair hits world.
 	void AimTowardsCrosshair();
 
 	bool GetSightRayHitLocation(FVector& HitLocation) const;

@@ -10,6 +10,7 @@
 
 //Forward Declarations
 class UTankBarrel; 
+class UTankTurret_SMC;
 class UTankAimingComponent;
 
 UCLASS()
@@ -24,6 +25,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Setup)
 	void SetBarrelReference(UTankBarrel* BarrelToSet);
 
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void SetTurretReference(UTankTurret_SMC* TurretToSet);
 
 protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
@@ -39,6 +42,8 @@ private:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
 	UStaticMeshComponent* Barrel = nullptr;
+
+	UStaticMeshComponent* Turret = nullptr;
 
 	UPROPERTY(EditAnywhere, Category = Firing)
 	float LaunchSpeed = 100000; //TODO find sensible default value
